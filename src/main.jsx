@@ -8,6 +8,7 @@ import Stat from './Pages/Stats/Stat';
 import Homepage from './Pages/Homepage/Homepage';
 import Timeline from './Pages/Timeline/Timeline';
 import Error from './Pages/Errorpage/Error';
+import Details from './Pages/Details/Details';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
     {
       path: "/timeline",
       element: <Timeline></Timeline>,
+    },
+     {
+      path: "/details/:id",
+      element: <Details></Details>,
     },
 ],
 errorElement: <Error></Error>

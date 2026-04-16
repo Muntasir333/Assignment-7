@@ -1,4 +1,5 @@
 import React, { use } from 'react';
+import { Link } from 'react-router';
 
 const dataPromise= fetch("/public/Data/Data.json").then((res)=>res.json() )
 const tagColors = {
@@ -23,14 +24,14 @@ const Friends = () => {
     const data = use(dataPromise)
     console.log(data)
     return (
-        <div className=' bg-[#F8FAFC]'>
+        <div className=' bg-[#F8FAFC] py-10'>
         <div className='container mx-auto'>
-            <h2 className='text-3xl font-bold text-[#244D3F] mt-8'>Your Friend</h2>
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-20 mt-8 gap-8'>
+            <h2 className='text-3xl font-bold text-[#244D3F]'>Your Friend</h2>
+              <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-4 lg:px-20 mt-8 gap-8'>
 
             {
                 data.map((dati, ind)=>{
-                    return <div key={ind} className="card bg-white w-96 shadow-sm flex flex-col items-center space-y-3 text-center py-5">
+                    return <Link to={`/details/${dati.id}`} key={ind} className="card bg-white w-full shadow-sm flex flex-col items-center space-y-3 text-center py-5">
   <figure>
     <img className='rounded-full'
       src={dati.picture}
@@ -52,7 +53,7 @@ const Friends = () => {
       }
     </div>
   </div>
-</div>
+</Link>
                 })
             }
 

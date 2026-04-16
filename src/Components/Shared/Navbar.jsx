@@ -11,7 +11,7 @@ import { NavLink } from 'react-router';
 const Navbar = () => {
     return (
         <div>
-            <nav className='flex justify-between items-center px-20 py-6 '>
+            <nav className='flex flex-col lg:flex-row justify-between items-center px-20 py-6 '>
                 <img src={logo} alt="" className='w-36 h-8' />
                 <div>
                     <ul className='flex gap-8'>
