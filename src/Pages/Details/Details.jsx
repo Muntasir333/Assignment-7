@@ -31,7 +31,7 @@ const handle = (type)=>{
     setAction([...action, {
         expectedCard, type}])
 
-         toast.success(`${type} to ${expectedCard.name}`);
+         toast.success(`${type} with ${expectedCard.name}`);
 
     console.log(setAction)
 }
