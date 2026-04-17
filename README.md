@@ -1,16 +1,21 @@
-# React + Vite
+# This Project name is KinKeeper.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Description
 
-Currently, two official plugins are available:
+This project is a social media platform where we connect friends with various way of connection. We know that friendship is very very important for human life as we are social being. So connection is necessary. Kinekeeper gives us the oppportunity to connect with our friends with many exclusive features which makes our relationship easier. By this, you can connect with any friend from the any corner of the world. The world came to our hand in the field of friendship when we use it.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Technology Used
+This technology are used for this project:
 
-## React Compiler
+1. React.js
+2. Tailwind CSS
+3. Daisy Ui
+4. React Router
+5. React Toastify
+6. Rechart
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# 3 key Features
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. You can connect with yor friend through Call, Text, Video call. You will have aa add free faster experience.
+2. There is a timeline where you can see how much time you have connected with your friend in recent time.
+3. You can see connection statistics in a pie chart to understand better.
