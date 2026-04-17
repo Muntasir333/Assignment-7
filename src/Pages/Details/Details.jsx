@@ -1,14 +1,25 @@
-import React, { use } from 'react';
+import React, { use, useContext, } from 'react';
 import { useParams } from 'react-router';
 import Call from "../../assets/call.png"
 import Text from "../../assets/text.png"
 import Video from "../../assets/video.png"
+import { SeeContext } from '../../Connection/ConnectionProvide';
 
 const dataPromise= fetch("/public/Data/Data.json").then((res)=>res.json() )
+
+
 const Details = () => {
     const {id} = useParams();
     const data = use(dataPromise)
     const expectedCard = data.find(dati=>dati.id == id)
+     const {action, setAction} = useContext(SeeContext)
+
+const handle = (type)=>{
+    setAction([...action, {
+        expectedCard, type}])
+
+    console.log(setAction)
+}
     console.log(expectedCard)
     return (
         <div className='lg:flex justify-center bg-[#F8FAFC] min-h-screen p-20 gap-10'>
@@ -60,9 +71,9 @@ const Details = () => {
                 <div className='bg-white mt-5 p-8'>
                     <p>Quick Check-In</p> <br></br>
                     <div className='flex flex-col lg:flex-row justify-center items-center gap-5'>
-                    <button className='btn flex flex-col justify-center items-center w-96 h-full p-4'><img className='w-6' src={Call} alt="" />Call</button>
-                    <button className='btn flex flex-col justify-center items-center w-96 h-full p-4'><img className='w-6' src={Text} alt="" />Text</button>
-                    <button className='btn flex flex-col justify-center items-center w-96 h-full p-4'><img className='w-6' src={Video} alt="" />Video</button>
+                    <button onClick={()=>handle("call")} className='btn flex flex-col justify-center items-center w-96 h-full p-4'><img className='w-6' src={Call} alt="" />Call</button>
+                    <button onClick={()=>handle("text")} className='btn flex flex-col justify-center items-center w-96 h-full p-4'><img className='w-6' src={Text} alt="" />Text</button>
+                    <button onClick={()=>handle("video")} className='btn flex flex-col justify-center items-center w-96 h-full p-4'><img className='w-6' src={Video} alt="" />Video</button>
                    </div>
                 </div>
             </div>

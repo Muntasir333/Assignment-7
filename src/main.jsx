@@ -9,6 +9,7 @@ import Homepage from './Pages/Homepage/Homepage';
 import Timeline from './Pages/Timeline/Timeline';
 import Error from './Pages/Errorpage/Error';
 import Details from './Pages/Details/Details';
+import ConnectionContext from './Connection/ConnectionContext';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,8 @@ errorElement: <Error></Error>
 ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <ConnectionContext>
    <RouterProvider router={router} />,
+   </ConnectionContext>
   </StrictMode>,
 )
