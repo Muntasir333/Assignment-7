@@ -3,20 +3,26 @@ import { Link } from 'react-router';
 
 const dataPromise= fetch("/public/Data/Data.json").then((res)=>res.json() )
 const tagColors = {
-    "family friend": "bg-blue-100 text-blue-700",
+    "family friend": "bg-green-100 text-green-700",
    "close friend": "bg-green-100 text-green-700",
-    online: "bg-purple-100 text-purple-700",
-    gym: "bg-red-100 text-red-700",
-    university: "bg-pink-100 text-pink-700",
-    "project mate": "bg-aqua-100 text-aqua-700",
-    school: "bg-violet-100 text-violet-700",
-    "best friend": "bg-amber-100 text-amber-700",
-    work: "bg-gray-100 text-gray-700",
-    college: "bg-blue-300 text-blue-700",
-    gaming: "bg-yellow-100 text-yellow-700",
-    travel: "bg-pink-100 text-pink-700",
-    photography: "bg-indigo-100 text-indigo-700",
-    neighbor: "bg-orange-100 text-orange-700"
+    online: "bg-green-100 text-green-700",
+    gym: "bg-green-100 text-green-700",
+    university: "bg-green-100 text-green-700",
+    "project mate": "bg-green-100 text-green-700",
+    school: "bg-green-100 text-green-700",
+    "best friend": "bg-green-100 text-green-700",
+    work: "bg-green-100 text-green-700",
+    college: "bg-green-100 text-green-700",
+    gaming: "bg-green-100 text-green-700",
+    travel: "bg-green-100 text-green-700",
+    photography: "bg-green-100 text-green-700",
+    neighbor: "bg-green-100 text-green-700",
+}
+
+const statusColor = {
+  overdue : "bg-red-300 text-red-700",
+  "on-track" : "bg-blue-300 text-blue-700",
+  "due-soon" : "bg-orange-300 text-orange-700",
 }
 
 
@@ -40,7 +46,7 @@ const Friends = () => {
   <div className="card-body">
     <h2 className='font-bold text-2xl'>{dati.name}</h2>
     <p>{dati.days_since_contact}d ago</p>
-    <div className='bg-green-400  w-max p-2 rounded-xl mx-auto'>
+    <div className={` ${statusColor[dati.status]} w-max p-2 rounded-xl mx-auto`}>
     <p className='text-[#244D3F]'>{dati.status}</p>
     </div>
     <div className="flex gap-2">
