@@ -7,7 +7,10 @@ const Homepage = () => {
     return (
         <div>
             <Banner></Banner>
-            <Suspense fallback= {<span className="loading loading-spinner loading-lg"></span>}>
+            <Suspense fallback={
+                <div className='flex justify-center items-center'>
+                    <span className="loading loading-spinner loading-lg "></span>
+                    </div>}>
                  <Friends></Friends>
             </Suspense>
 

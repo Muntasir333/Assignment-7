@@ -25,7 +25,7 @@ const data = [
             <div className=''>
         <h2 className='text-center font-bold text-5xl my-10'>Friendship Analytics</h2></div>
         <div>
-            <PieChart style={{ width: '30vw', maxHeight: '80vh', margin: 'auto', aspectRatio: 1,}} responsive>
+            <PieChart style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', margin: 'auto', aspectRatio: 1,}} responsive>
                 
       <Pie
         data={data}

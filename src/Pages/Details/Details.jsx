@@ -73,9 +73,9 @@ Delete</button>
   </div>
             <div className='space-y-12 '>
                 <div className='flex flex-col lg:flex-row justify-center items-center gap-5' >
-                    <div className=" bg-white w-96  shadow-sm flex flex-col items-center space-y-3 text-center py-5 "><p className='text-3xl font-bold'>{expectedCard.days_since_contact}</p> <p className='font-bold'>Days since Contact</p></div>
-                    <div className=" bg-white w-96  shadow-sm flex flex-col items-center space-y-3 text-center py-5 "><p className='text-3xl font-bold'>{expectedCard.goal}</p> <p className='font-bold'>Goal(Days)</p></div>
-                    <div className=" bg-white w-96  shadow-sm flex flex-col items-center space-y-3 text-center py-5 "><p className='text-3xl font-bold'>{expectedCard.next_due_date}</p> <p className='font-bold'>Next Date</p></div>
+                    <div className=" bg-white w-full lg:w-96 shadow-sm flex flex-col items-center space-y-3 text-center py-5 "><p className='text-3xl font-bold'>{expectedCard.days_since_contact}</p> <p className='font-bold'>Days since Contact</p></div>
+                    <div className=" bg-white w-full lg:w-96 shadow-sm flex flex-col items-center space-y-3 text-center py-5 "><p className='text-3xl font-bold'>{expectedCard.goal}</p> <p className='font-bold'>Goal(Days)</p></div>
+                    <div className=" bg-white w-full lg:w-96 shadow-sm flex flex-col items-center space-y-3 text-center py-5 "><p className='text-3xl font-bold'>{expectedCard.next_due_date}</p> <p className='font-bold'>Next Date</p></div>
                 </div>
                 <div className='bg-white mt-5 p-8'>
                     <div className='flex flex-col lg:flex-row justify-between items-center'>
@@ -87,9 +87,9 @@ Delete</button>
                 <div className='bg-white mt-5 p-8'>
                     <p className='text-3xl font-bold'>Quick Check-In</p> <br></br>
                     <div className='flex flex-col lg:flex-row justify-center items-center gap-5'>
-                    <button onClick={()=>handle("call")} className='btn flex flex-col justify-center items-center w-96 h-full p-4'><img className='w-6' src={Call} alt="" />Call</button>
-                    <button onClick={()=>handle("text")} className='btn flex flex-col justify-center items-center w-96 h-full p-4'><img className='w-6' src={Text} alt="" />Text</button>
-                    <button onClick={()=>handle("video")} className='btn flex flex-col justify-center items-center w-96 h-full p-4'><img className='w-6' src={Video} alt="" />Video</button>
+                    <button onClick={()=>handle("call")} className='btn flex flex-col justify-center items-center w-full lg:w-96 h-full p-4'><img className='w-6' src={Call} alt="" />Call</button>
+                    <button onClick={()=>handle("text")} className='btn flex flex-col justify-center items-center w-full lg:w-96 h-full p-4'><img className='w-6' src={Text} alt="" />Text</button>
+                    <button onClick={()=>handle("video")} className='btn flex flex-col justify-center items-center w-full lg:w-96 h-full p-4'><img className='w-6' src={Video} alt="" />Video</button>
                    </div>
                 </div>
             </div>

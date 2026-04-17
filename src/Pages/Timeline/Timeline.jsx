@@ -19,12 +19,12 @@ const Timeline = () => {
         <div className='bg-[#F8FAFC] p-20'>
 
             <div className=''>
-            {
+            {action.length === 0 ? <h2 className='font-bold text-5xl text-center'>No data Found</h2> :
                 action.map((item, index)=>(
                     <div key={index} className='flex items-center gap-4 mt-4 bg-white p-5'>
                         <img src={imageMap[item.type]}/>
                            <div>
-                <p>{item.type} with {item.expectedCard.name}</p>
+                <p>{item.type} with <span className='text-xl font-bold'>{item.expectedCard.name}</span></p>
                 <p>{toady.toDateString()}</p>
             </div>
             </div>
